@@ -2,7 +2,7 @@
 import codecs
 
 def cleaner():
-	in_file_path, qa_file_path, choice_file_path = "./data/test/raw.txt", "./data/test/clean.txt", "./data/test/choice.txt"
+	in_file_path, qa_file_path, choice_file_path = "./data/test/raw.txt", "./data/test/clean.txt", "./result/choice.txt"
 	line_list = codecs.open(in_file_path, "r").read().split("\n")
 	question_list, answer_list, choice_list = list(), list(), list()
 	for line in line_list:

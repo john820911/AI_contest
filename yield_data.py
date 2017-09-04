@@ -2,6 +2,18 @@
 import os
 import codecs
 
+def yielder_1(dir_path):
+	return
+
+def yielder_2(dir_path):
+	return
+
+def yielder_3(dir_path):
+	return
+
+def yielder_4(dir_path):
+	return
+
 def yielder_5(dir_path):
 	for root_dir_path, dir_path_list, file_path_list in os.walk(dir_path):
 		for file_path in file_path_list:
@@ -33,27 +45,36 @@ def yielder_5(dir_path):
 						break
 					new_line_list.append(line)
 				yield file_path, new_line_list[::-1]
-	
-type_list = [
-	"我的這一班"
-]
 
+def yielder_6(dir_path):
+	return
+
+def yielder_7(dir_path):
+	return
+
+def yielder_8(dir_path):
+	return
+	
 # type_list = [
-# 	"下課花路米", "人生劇展", "公視藝文大道", "成語賽恩思", 
-# 	"我的這一班", "流言追追追", "聽聽看", "誰來晚餐"
+# 	"我的這一班"
 # ]
 
-type_dict = { 
-	"我的這一班": yielder_5
-}
+type_list = [
+	"下課花路米", "人生劇展", "公視藝文大道", "成語賽恩思", 
+	"我的這一班", "流言追追追", "聽聽看", "誰來晚餐"
+]
 
-# type_dict = {
-# 	"下課花路米": yielder_1,
-# 	"人生劇展": yielder_2,
-# 	"公視藝文大道": yielder_3, 
-# 	"成語賽恩思": yielder_4, 
-# 	"我的這一班": yielder_5, 
-# 	"流言追追追": yielder_6, 
-# 	"聽聽看": yielder_7, 
-# 	"誰來晚餐": yielder_8
+# type_dict = { 
+# 	"我的這一班": yielder_5
 # }
+
+type_dict = {
+	"下課花路米": yielder_1,
+	"人生劇展": yielder_2,
+	"公視藝文大道": yielder_3, 
+	"成語賽恩思": yielder_4, 
+	"我的這一班": yielder_5, 
+	"流言追追追": yielder_6, 
+	"聽聽看": yielder_7, 
+	"誰來晚餐": yielder_8
+}

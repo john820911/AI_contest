@@ -1,8 +1,10 @@
 [strings]
 # Mode : train, test, serve
-mode = train
+mode = test
 train_enc = data/train/train.enc
 train_dec = data/train/train.dec
+dev_enc = data/test/dev.enc
+dev_dec = data/test/dev.dec
 test_enc = data/test/test.enc
 test_0_dec = data/test/test_0.dec
 test_1_dec = data/test/test_1.dec
@@ -10,20 +12,21 @@ test_2_dec = data/test/test_2.dec
 test_3_dec = data/test/test_3.dec
 test_4_dec = data/test/test_4.dec
 test_5_dec = data/test/test_5.dec
+result = result/result.txt
 dict_directory = dict/
 model_directory = model/
 [ints]
 # vocabulary size : 20,000 is a reasonable size
-enc_vocab_size = 20000
-dec_vocab_size = 20000
+enc_vocab_size = 25000
+dec_vocab_size = 25000
 # number of LSTM layers : 1/2/3
 num_layers = 3
 # typical options : 128, 256, 512, 1024
-layer_size = 256
+layer_size = 512
 max_train_data_size = 0
-batch_size = 64
-steps_per_checkpoint = 300
-max_to_keep = 50
+batch_size = 256
+steps_per_checkpoint = 1000
+max_to_keep = 150
 [floats]
 learning_rate = 0.5
 learning_rate_decay_factor = 0.99
